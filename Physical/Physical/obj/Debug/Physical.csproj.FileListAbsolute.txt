@@ -81,3 +81,5 @@ C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\obj\Debug\Physical.csproj
 C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\obj\Debug\Physical.csproj.CopyComplete
 C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\obj\Debug\Physical.dll
 C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\obj\Debug\Physical.pdb
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Ninject.dll
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Ninject.xml

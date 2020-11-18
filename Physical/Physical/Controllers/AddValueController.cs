@@ -12,9 +12,9 @@ namespace Physical.Controllers
     {
         private readonly IAddValueService _service;
 
-        public AddValueController()
+        public AddValueController(IAddValueService service)
         {
-            _service = new AddValueService();
+            _service = service;
         }
         // GET: AddValue
         public ActionResult AddValue()

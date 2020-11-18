@@ -11,9 +11,9 @@ namespace Physical.Controllers
     public class ShowTableController : Controller
     {
         private readonly IShowTableService _service;
-        public ShowTableController()
+        public ShowTableController(IShowTableService service)
         {
-            _service = new ShowTableService();
+            _service = service;
         }
         // GET: ShowTable
         public ActionResult ShowTable()

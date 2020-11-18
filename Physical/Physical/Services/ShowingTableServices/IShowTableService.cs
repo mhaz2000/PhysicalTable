@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Physical.Services.ShowingTableServices
 {
-    interface IShowTableService
+    public interface IShowTableService
     {
         List<string> GetAllTableNames();
         List<string> GetAllFieldNames(string name);

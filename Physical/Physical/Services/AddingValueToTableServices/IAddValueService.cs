@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Physical.Services.AddingValueToTableServices
 {
-    interface IAddValueService
+    public interface IAddValueService
     {
         List<string> GetAllTableNames();
         List<string> GetAllFieldNames(string name);

@@ -12,9 +12,9 @@ namespace Physical.Controllers
     {
         private readonly ICreationService _service;
 
-        public CreateTableController()
+        public CreateTableController(ICreationService service)
         {
-            _service = new CreationService();
+            _service = service;
         }
         // GET: CreateTable
         public ActionResult CreateTable()
