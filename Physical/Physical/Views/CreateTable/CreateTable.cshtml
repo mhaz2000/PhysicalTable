@@ -1,0 +1,86 @@
+﻿@using Physical.Common.Enums
+@using Physical.DTOs
+@model TableStructionDto
+@{
+    ViewBag.Title = "CreateTable";
+}
+
+<h2 dir="rtl">ساخت جدول جدید</h2>
+
+@using (Html.BeginForm("CreateTable", "CreateTable", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <hr />
+
+    <h3 dir="rtl">@Model.Message</h3>
+
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group" dir="rtl">
+
+        <div class="col-md-12" dir="rtl">
+            <div class="col-md-6" dir="rtl">
+                
+                @Html.LabelFor(model => model.FieldNumber, htmlAttributes: new { @class = "col-md-12 control-label" })
+                @Html.EditorFor(model => model.FieldNumber, new { htmlAttributes = new { @class = "form-control", required = "required", Type = "number", Value = Model.FieldNumber } })
+               
+            </div>
+            <div class="col-md-6" dir="rtl">
+
+                @Html.LabelFor(model => model.tableName, htmlAttributes: new { @class = "col-md-12 control-label" })
+                @Html.EditorFor(model => model.tableName, new { htmlAttributes = new { @class = "form-control", required = "required", Value = Model.tableName } })
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12" dir="rtl">
+        <input type="submit" style="font-size:20px" class="btn btn-default" value="ایجاد جدول" />
+    </div>
+
+}
+
+
+@using (Html.BeginForm("CreateTable", "CreateTable", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+
+    for (int i = 0; i < Model.FieldNumber; i++)
+    {
+        
+
+
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.tableName)
+        @Html.HiddenFor(model => model.FieldNumber)
+        <div class="form-group" dir="rtl">
+
+
+            <div class="col-md-12" dir="rtl">
+
+                <div class="col-md-6" dir="rtl">
+                    @Html.LabelFor(model => model.FieldTypes, new { @class = "col-md-12 control-label" })
+                    @Html.DropDownListFor(model => model.FieldTypes[i], EnumHelper.GetSelectList(typeof(FieldTypes))
+                   , "Types", new { @class = "control-label" })
+
+
+
+                </div>
+                <div class="col-md-6" dir="rtl">
+                    @Html.LabelFor(model => model.FieldNames, new { @class = "col-md-12 control-label" })
+                    @Html.TextBoxFor(model => model.FieldNames[i], new { @class = "form-control", required = "required" })
+
+
+                </div>
+            </div>
+        </div>
+    }
+    if (Model.FieldNumber != 0)
+    {
+        <div class="col-md-12" dir="rtl">
+            <input type="submit" style="font-size:20px" class="btn btn-default" value="ثبت جدول جدید" />
+        </div>
+    }
+}
+
+
+

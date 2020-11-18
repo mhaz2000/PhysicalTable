@@ -1,0 +1,55 @@
+﻿@using Physical.DTOs
+@model AddNewValueDto
+@{
+    ViewBag.Title = "AddValue";
+}
+
+<h2>AddValue</h2>
+
+<div dir="rtl">
+    @using (Html.BeginForm("AddValue", "AddValue", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.HiddenFor(model => model.TableNames)
+        @Html.DropDownListFor(model => model.ChosenName, new SelectList(Model.TableNames), "نام جدول را انتخاب نمایید",
+            new { onchange = "this.form.submit();", @class = "form-control", value = Model.ChosenName })
+
+    }
+</div>
+
+
+@using (Html.BeginForm("AddValue", "AddValue", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    if (!(Model.FieldNames is null))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.ChosenName)
+
+
+        <table class="table">
+            <tr>
+                @foreach (var name in Model.FieldNames)
+                {
+                    <th>
+                        @name
+                    </th>
+                }
+            </tr>
+            <tr>
+                @for (int i = 0; i < Model.FieldNames.Count; i++)
+                {
+                    <td>
+                        @Html.TextBoxFor(model => model.FieldValues[i], new { @class = "form-control", required = "required" })
+                    </td>
+                }
+            </tr>
+        </table>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+
+    }
+}

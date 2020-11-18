@@ -1,0 +1,47 @@
+﻿@using Physical.DTOs
+@model ShowTableDto
+@{
+    ViewBag.Title = "ShowTable";
+}
+
+<h2>ShowFullTable</h2>
+
+<div dir="rtl">
+    @using (Html.BeginForm("ShowTable", "ShowTable", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.DropDownListFor(model => model.ChosenName, new SelectList(Model.TableNames), "نام جدول را انتخاب نمایید",
+            new { onchange = "this.form.submit();", @class = "form-control", value = Model.ChosenName })
+
+    }
+</div>
+
+@if (!(Model.Values is null))
+{
+    <table class="table">
+
+        <tr>
+            @foreach (var names in Model.FieldNames)
+            {
+                <th>
+                    @names
+                </th>
+            }
+        </tr>
+        @for (int i = 0; i < Model.Height; i++)
+        {
+            int count = i;
+            <tr>
+                @for (int j = 0; j < Model.Width; j++)
+                {
+                    while (count < Model.Values.Count)
+                    {
+                        <td>
+                            @Model.Values[count]
+                        </td>
+                        count += Model.Height;
+                    }
+                }
+            </tr>
+        }
+    </table>
+}

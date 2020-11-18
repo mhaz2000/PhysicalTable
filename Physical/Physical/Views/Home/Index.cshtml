@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<style>
+    a {
+        color: black;
+    }
+</style>
+
+<div class="jumbotron" dir="rtl">
+    <h1>سامانه ی ثبت جدول</h1>
+    @*<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>*@
+
+</div>
+
+<div class="row" dir="rtl">
+    <div style="text-align:center; font-size:20px; padding:10px; background-color:aquamarine; border:solid;" class="col-md-4">
+        @Html.ActionLink("ساخت جداول", "CreateTable", "CreateTable")
+    </div>
+    <div style="text-align:center; font-size:20px; padding:10px; background-color:aquamarine; border:solid;" class="col-md-4">
+        @Html.ActionLink("افزودن مقدار به جداول", "AddValue", "AddValue")
+    </div>
+    <div style="text-align:center; font-size:20px; padding:10px; background-color:aquamarine; border:solid;" class="col-md-4">
+        @Html.ActionLink("مشاهده جداول", "ShowTable", "ShowTable")
+    </div>
+</div>
