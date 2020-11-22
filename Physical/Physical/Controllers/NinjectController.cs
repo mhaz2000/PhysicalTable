@@ -1,7 +1,8 @@
-﻿using Ninject;
-using Physical.Services.AddingValueToTableServices;
-using Physical.Services.ShowingTableServices;
-using Physical.Services.TableCreationServices;
+﻿using Data.DataUnitOfWork;
+using Ninject;
+using Services.AddValueToTableService;
+using Services.ShowTableService;
+using Services.CreateTableService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,11 @@ namespace Physical.Controllers
 
         void AddBinding()
         {
-            _nenjectkernel.Bind<IShowTableService>().To<ShowTableService>();
-            _nenjectkernel.Bind<IAddValueService>().To<AddValueService>();
-            _nenjectkernel.Bind<ICreationService>().To<CreationService>();
+            _nenjectkernel.Bind<IShowingService>().To<ShowingService>();
+            _nenjectkernel.Bind<IAddingService>().To<AddingService>();
+            _nenjectkernel.Bind<ICreatingService>().To<CreatingService>();
+            _nenjectkernel.Bind<IUnitOfWork>().To<UnitOfWork>();
+
         }
         protected override IController GetControllerInstance(RequestContext requestContext, Type ControllerType)
         {

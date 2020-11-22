@@ -1,0 +1,15 @@
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\bin\Debug\Services.dll
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\bin\Debug\Services.pdb
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\bin\Debug\Common.dll
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\bin\Debug\Data.dll
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\bin\Debug\EntityFramework.dll
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\bin\Debug\Common.pdb
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\bin\Debug\Common.dll.config
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\bin\Debug\Data.pdb
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\bin\Debug\Data.dll.config
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\bin\Debug\EntityFramework.xml
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\obj\Debug\Services.csprojAssemblyReference.cache
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\obj\Debug\Services.csproj.CopyComplete
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\obj\Debug\Services.dll
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Services\obj\Debug\Services.pdb

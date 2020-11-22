@@ -1,5 +1,5 @@
-﻿using Physical.DTOs;
-using Physical.Services.TableCreationServices;
+﻿using Common.DTOs;
+using Services.CreateTableService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +10,9 @@ namespace Physical.Controllers
 {
     public class CreateTableController : Controller
     {
-        private readonly ICreationService _service;
+        private readonly ICreatingService _service;
 
-        public CreateTableController(ICreationService service)
+        public CreateTableController(ICreatingService service)
         {
             _service = service;
         }

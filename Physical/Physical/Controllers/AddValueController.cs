@@ -1,5 +1,5 @@
-﻿using Physical.DTOs;
-using Physical.Services.AddingValueToTableServices;
+﻿using Common.DTOs;
+using Services.AddValueToTableService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +10,16 @@ namespace Physical.Controllers
 {
     public class AddValueController : Controller
     {
-        private readonly IAddValueService _service;
+        private readonly IAddingService _service;
 
-        public AddValueController(IAddValueService service)
+        public AddValueController(IAddingService service)
         {
             _service = service;
         }
         // GET: AddValue
         public ActionResult AddValue()
         {
-            return View(new AddNewValueDto(_service.GetAllTableNames()));
+            return View(new AddNewValueDto(_service.GetTableNames()));
         }
         [HttpPost]
         public ActionResult AddValue([Bind(Include = "ChosenName,FieldValues")] AddNewValueDto table)
@@ -27,8 +27,8 @@ namespace Physical.Controllers
             //Checks if user insert values or not.
             if (table.FieldValues is null)
             {
-                table.FieldNames = _service.GetAllFieldNames(table.ChosenName);
-                table.TableNames = _service.GetAllTableNames();
+                table.FieldNames = _service.GetTableFieldNames(table);
+                table.TableNames = _service.GetTableNames();
                 return View(table);
             }
 

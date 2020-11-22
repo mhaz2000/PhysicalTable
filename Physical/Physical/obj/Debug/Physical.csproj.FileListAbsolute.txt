@@ -83,3 +83,11 @@ C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\obj\Debug\Physical.dll
 C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\obj\Debug\Physical.pdb
 C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Ninject.dll
 C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Ninject.xml
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Common.dll
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Data.dll
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Services.dll
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Common.pdb
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Common.dll.config
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Data.pdb
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Data.dll.config
+C:\Users\asus\Desktop\me\C#\Physical\Physical\Physical\bin\Services.pdb
