@@ -10,11 +10,6 @@ namespace Data.Repositories.AddingValueToTable
 {
     class TableAdding : Repository, ITableAdding
     {
-        private PhysicalDB _db;
-        public TableAdding()
-        {
-            _db = new PhysicalDB();
-        }
         //Add new values into a table.
         public void AddValueToTable(string[] Values, string tableName)
         {

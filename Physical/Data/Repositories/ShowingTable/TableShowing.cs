@@ -10,11 +10,6 @@ namespace Data.Repositories.ShowingTable
 {
     class TableShowing : Repository, ITableShowing
     {
-        private PhysicalDB _db;
-        public TableShowing()
-        {
-            _db = new PhysicalDB();
-        }
         //return full table.
         public List<object> GetFullTable(string tableName)
         {

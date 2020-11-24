@@ -10,7 +10,7 @@ namespace Data.Repositories
 {
     public class Repository : IRepository
     {
-        private PhysicalDB _db;
+        protected PhysicalDB _db;
 
         public Repository()
         {

@@ -11,11 +11,6 @@ namespace Data.Repositories.CreatingTable
 {
     class TableCreating : Repository, ITableCreating
     {
-        private PhysicalDB _db;
-        public TableCreating()
-        {
-            _db = new PhysicalDB();
-        }
         //Add new table into data base.
         public void AddTable(string tableName, string[] fieldNames, string[] fieldTypes)
         {
